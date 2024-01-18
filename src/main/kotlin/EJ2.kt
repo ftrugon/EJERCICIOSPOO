@@ -1,83 +1,70 @@
-import java.lang.NullPointerException
+class Persona (peso:Float,altura:Float){
+    var peso = peso
+        set(value) {
+            require(value>0){"El peso no puede ser negativo"}
+            field = value
+        }
 
-class PersonaEJ2 (var peso:Double, var altura:Double){
-    private var nombre :String = ""
-    private var imc:Double
+    var altura = altura
+        set(value) {
+            require(value>0){"El peso no puede ser negativo"}
+            field = value
+        }
 
-    init {
-        this.imc = this.peso/(this.altura*this.altura)
-    }
+    var nombre :String = ""
 
+    var imc:Float = this.peso/(this.altura*this.altura)
 
-    constructor(peso:Double,altura:Double, nombre:String):this(peso,altura) {
+    constructor(peso:Float,altura:Float, nombre:String):this(peso,altura) {
         this.nombre = nombre
     }
 
-    /**
-     * Pide el nombre para cambiarlo
-     */
+    //override fun toString(): String {
+    //    if (this.nombre.isEmpty()) {
+    //        print("Dime tu nombre: ")
+    //        this.nombre = readln()
+    //    }
+    //}
+
     fun setnombre(){
-        if (this.nombre.isEmpty()) {
+        if (this.nombre.isEmpty() || this.nombre.isNotEmpty()) {
             print("Dime tu nombre: ")
             this.nombre = readln()
         }
     }
 
-    fun setpeso(){
-        print("Dime tu peso: ")
-        this.peso = readln().toDouble()
-    }
+    //fun setpeso(){
+    //    print("Dime tu peso: ")
+    //    this.peso = readln().toFloat()
+    //}
 
     fun setaltura(){
         print("Dime tu altura: ")
-        this.altura = readln().toDouble()
+        this.altura = readln().toFloat()
+        imcactualiz()
     }
 
-    fun IMCACTUALIZADO(){
+    private fun imcactualiz(){
         this.imc = this.peso/(this.altura*this.altura)
     }
 
-    fun saludar(){
-        println("Hola, soy ${this.nombre}")
-    }
-
-    fun obtenerImc() = "%.2f".format(this.imc)
-
-    fun mostrardesc(){
-        println("$nombre pesa ${this.peso}Kg, mide $altura m y tiene un IMC de ${obtenerImc()} ${obtenerImcDesc()}")
-    }
-
-    private fun obtenerImcDesc():String{
-        return when (imc){
-            in 1.0..18.5 -> "(peso insuficiente)"
-            in 18.6..24.9 -> "(peso saludable)"
-            in 25.0..29.9 -> "(sobrepeso)"
-            //imc > 30.0-> "(obesidad)"
-            else -> "(peso no existente)"
-        }
-    }
 
 }
 
 fun main() {
 
-    val persona1 = PersonaEJ2(76.0,1.72)
+    val persona1 = Persona(76F,1.72F)
     persona1.setnombre()
-    persona1.saludar()
+    println("${persona1.nombre}, ${persona1.peso}, ${persona1.altura}")
     println()
 
-    val persona2 = PersonaEJ2(76.0,1.7,"alberto")
-    persona2.mostrardesc()
+    val persona3 = Persona(76f,1.79f,"WALTER WHITE")
+    println("${persona3.nombre}, ${persona3.peso}, ${persona3.altura}, ${persona3.imc}")
+    persona3.setaltura()
+    println("${persona3.nombre}, ${persona3.peso}, ${persona3.altura}, ${persona3.imc}")
+    println()
+
+    val persona2 = Persona(89f,1.79f,"JESSE")
 
 
-    try {
-        val persona3 = PersonaEJ2(76.0,1.72,"persona")
-        persona3.obtenerImc()
-        persona3.setpeso()
-        persona3.setaltura()
-        persona3.IMCACTUALIZADO()
-        persona3.mostrardesc()
-    }catch (e:Exception){
-        println("Error")
-    }
 }

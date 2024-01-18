@@ -1,60 +1,40 @@
-import java.lang.NullPointerException
-
-class Persona (var peso:Float, var altura:Float){
-    var nombre :String = ""
-    var imc:Float
-    init {
-        this.imc = this.peso/(this.altura*this.altura)
-    }
-
-
-    constructor(peso:Float,altura:Float, nombre:String):this(peso,altura) {
-        this.nombre = nombre
-    }
-
-    fun setnombre(){
-        if (this.nombre.isEmpty()) {
-            print("Dime tu nombre: ")
-            this.nombre = readln()
+class Rectangulo(base : Int,altura:Int){
+    private var base = 0
+        set(value) {
+            require(value>0)
+            field = value
         }
+    init {
+        this.base = base
     }
 
-    fun setpeso(){
-        print("Dime tu peso: ")
-        this.peso = readln().toFloat()
+    private var altura = 0
+        set(value) {
+            require(value>0){"La altura tiene que ser mayor a 0"}
+            field = value
+        }
+    init {
+        this.altura = altura
     }
 
-    fun setaltura(){
-        print("Dime tu altura: ")
-        this.altura = readln().toFloat()
+    private var area = base * altura
+
+    private var perimetro = (base * 2) + (altura * 2)
+
+    override fun toString(): String {
+        return "El area es ${this.area} y el perimetro es ${this.perimetro}"
     }
-
-    fun IMCACTUALIZADO(){
-        this.imc = this.peso/(this.altura*this.altura)
-    }
-
-
 }
 
 fun main() {
-
-    val persona1 = Persona(76F,1.72F)
-    persona1.setnombre()
-    println()
-
-    val persona2 = Persona(76f,12f,"alberto")
-    println("${persona2.nombre} ${persona2.peso} ${persona2.altura}")
-    println()
-
-
     try {
-        val persona3 = Persona(76f,1.72f,"persona")
-        println(persona3.imc)
-        persona3.setpeso()
-        persona3.setaltura()
-        persona3.IMCACTUALIZADO()
-        println(persona3.imc)
-    }catch (e:Exception){
-        println("Error")
-    }
+        val rectangulo1 = Rectangulo(10, 20)
+        println(rectangulo1.toString())
+
+        val rectangulo2 = Rectangulo(15, 2230)
+        println(rectangulo2.toString())
+
+   }catch (e: IllegalArgumentException){
+       println(e.message)
+   }
 }
