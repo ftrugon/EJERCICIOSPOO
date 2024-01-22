@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="031fdee2-0d8a-42b8-b96f-b7d31834f6b5" name="Changes" comment="se acabo">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="031fdee2-0d8a-42b8-b96f-b7d31834f6b5" name="Changes" comment="ej 4 completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/EJ1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/EJ1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/EJ4.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/EJ4.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +36,7 @@
   "keyToString": {
     "Kotlin.EJ1Kt.executor": "Run",
     "Kotlin.EJ4Kt.executor": "Run",
+    "Kotlin.EJ5Kt.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -74,11 +72,20 @@
       <option name="project" value="LOCAL" />
       <updated>1705517696849</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ej 4 completed">
+      <option name="closed" value="true" />
+      <created>1705888640369</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705888640369</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="se acabo" />
-    <option name="LAST_COMMIT_MESSAGE" value="se acabo" />
+    <MESSAGE value="ej 4 completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="ej 4 completed" />
   </component>
 </project>
