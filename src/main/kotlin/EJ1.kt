@@ -1,7 +1,7 @@
 class Rectangulo(base : Int,altura:Int){
     private var base = 0
         set(value) {
-            require(value>0)
+            require(value > 0) {"base necesita ser mayor a 0"}
             field = value
         }
     init {
@@ -10,7 +10,7 @@ class Rectangulo(base : Int,altura:Int){
 
     private var altura = 0
         set(value) {
-            require(value>0){"La altura tiene que ser mayor a 0"}
+            require(value > 0){"La altura tiene que ser mayor a 0"}
             field = value
         }
     init {
@@ -28,13 +28,13 @@ class Rectangulo(base : Int,altura:Int){
 
 fun main() {
     try {
-        val rectangulo1 = Rectangulo(10, 20)
+        val rectangulo1 = Rectangulo(0, 20)
         println(rectangulo1.toString())
 
         val rectangulo2 = Rectangulo(15, 2230)
         println(rectangulo2.toString())
 
-   }catch (e: IllegalArgumentException){
-       println(e.message)
-   }
+    }catch (e: IllegalArgumentException){
+        println(e.message)
+    }
 }
