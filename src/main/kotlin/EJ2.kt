@@ -1,70 +1,56 @@
-class Persona (peso:Float,altura:Float){
-    var peso = peso
+import kotlin.math.roundToInt
+
+class Persona(
+    val peso:Double,
+    var altura:Double
+){
+    var nombre:String = ""
         set(value) {
-            require(value>0){"El peso no puede ser negativo"}
+            require(nombre.isBlank()) { "El nombre no puede ser nulo" }
             field = value
         }
 
-    var altura = altura
-        set(value) {
-            require(value>0){"El peso no puede ser negativo"}
-            field = value
-        }
+    var imc = peso / (altura*2)
 
-    var nombre :String = ""
-
-    var imc:Float = this.peso/(this.altura*this.altura)
-
-    constructor(peso:Float,altura:Float, nombre:String):this(peso,altura) {
+    constructor(peso: Double,altura: Double,nombre:String):this(peso,altura){
         this.nombre = nombre
     }
 
-    //override fun toString(): String {
-    //    if (this.nombre.isEmpty()) {
-    //        print("Dime tu nombre: ")
-    //        this.nombre = readln()
-    //    }
-    //}
 
-    fun setnombre(){
-        if (this.nombre.isEmpty() || this.nombre.isNotEmpty()) {
-            print("Dime tu nombre: ")
-            this.nombre = readln()
-        }
+    override fun toString(): String {
+        return """Persona: 
+ peso: $peso
+ altura: ${String.format("%.2f",this.imc)}
+ imc: $imc 
+ nombre: $nombre"""
     }
 
-    //fun setpeso(){
-    //    print("Dime tu peso: ")
-    //    this.peso = readln().toFloat()
-    //}
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (other !is Persona) return false
 
-    fun setaltura(){
-        print("Dime tu altura: ")
-        this.altura = readln().toFloat()
-        imcactualiz()
+        if (this.nombre != other.nombre) return false
+        if (this.altura != other.altura) return false
+        if (this.peso != other.peso) return false
+        return false
     }
-
-    private fun imcactualiz(){
-        this.imc = this.peso/(this.altura*this.altura)
-    }
-
-
 }
 
 fun main() {
+    print("DiMe Tu NoMbRe: ")
+    val nombre = readln()
+    val persona1 = Persona(23.8,0.50,nombre)
+    persona1.toString()
 
-    val persona1 = Persona(76F,1.72F)
-    persona1.setnombre()
-    println("${persona1.nombre}, ${persona1.peso}, ${persona1.altura}")
-    println()
+    val persona3 = Persona(43.3,1.72,"carlos")
+    println(persona3)
+    persona3.altura = 1.80
+    println(persona3)
 
-    val persona3 = Persona(76f,1.79f,"WALTER WHITE")
-    println("${persona3.nombre}, ${persona3.peso}, ${persona3.altura}, ${persona3.imc}")
-    persona3.setaltura()
-    println("${persona3.nombre}, ${persona3.peso}, ${persona3.altura}, ${persona3.imc}")
-    println()
-
-    val persona2 = Persona(89f,1.79f,"JESSE")
-
+    val persona2 = Persona(123.2,1.9,"Van Dijk")
+    persona2.altura = persona3.altura
+    println(persona2)
+    println(persona3)
+    if (persona2.equals(persona3)) println("Las personas son iguales") else println("Las personas no son iguales")
 
 }

@@ -1,4 +1,4 @@
-class Tiempo(hora:Int){
+        class Tiempo(hora:Int){
     private var hora = 0
         set(value) {
             require(value < 24) { "Un dia no tiene mas de 24 horas" }

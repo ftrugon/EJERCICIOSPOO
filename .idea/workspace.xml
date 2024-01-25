@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="031fdee2-0d8a-42b8-b96f-b7d31834f6b5" name="Changes" comment="ej 5 tambien">
+    <list default="true" id="031fdee2-0d8a-42b8-b96f-b7d31834f6b5" name="Changes" comment="todooooo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/EJ2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/EJ2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/EJ4.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/EJ4.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/EJ5.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/EJ5.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,29 +35,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Kotlin.EJ1Kt.executor": "Run",
-    "Kotlin.EJ4Kt.executor": "Run",
-    "Kotlin.EJ5Kt.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "Errors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
-}]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-8336523bb0d9-657b72ed" />
-      </set>
-    </attachedChunks>
-  </component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,29 +61,22 @@
       <option name="project" value="LOCAL" />
       <updated>1705517696849</updated>
     </task>
-    <task id="LOCAL-00002" summary="ej 4 completed">
-      <option name="closed" value="true" />
-      <created>1705888640369</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1705888640369</updated>
-    </task>
-    <task id="LOCAL-00003" summary="ej 5 tambien">
-      <option name="closed" value="true" />
-      <created>1705892292999</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1705892292999</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="se acabo" />
-    <MESSAGE value="ej 4 completed" />
-    <MESSAGE value="ej 5 tambien" />
-    <option name="LAST_COMMIT_MESSAGE" value="ej 5 tambien" />
+    <option name="LAST_COMMIT_MESSAGE" value="se acabo" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/EJ2.kt</url>
+          <line>53</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
